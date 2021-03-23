@@ -1,0 +1,48 @@
+http://localhost:8082/spring-boot-app/api/v1/test
+
+
+C5_PathParam_And_QueryParam_Controller
+http://localhost:8082/spring-boot-app/api/param
+
+Paginated params
+http://localhost:8082/spring-boot-app/student/v2/all?pageNo=0&limit=100&sortBy=sno&sortOrder=desc
+
+insert into STUDENT(SNO, SNAME) values(101, 'Babu');
+insert into STUDENT(SNO, SNAME) values(102, 'XYZ');
+insert into STUDENT(SNO, SNAME) values(103, 'ABC');
+
+insert into ROLE(ID,NAME) values(111,'ROLE_USER');
+insert into ROLE(ID,NAME) values(222,'ROLE_ADMIN');
+
+http://localhost:8082/spring-boot-app/user
+{
+  "email": "admin@visa.com",
+  "enabled": true,
+  "firstname": "admin",
+  "id": 0,
+  "lastPasswordResetDate": "2021-03-13T08:57:18.752Z",
+  "lastname": "admin",
+  "password": "admin",
+  "roles": [
+      {
+           "name":"ROLE_ADMIN"
+      }
+  ],
+  "username": "admin"
+}
+
+{
+  "email": "babu@visa.com",
+  "enabled": true,
+  "firstname": "babu",
+  "id": 0,
+  "lastPasswordResetDate": "2021-03-13T08:57:18.752Z",
+  "lastname": "babu",
+  "password": "babu",
+  "roles": [
+      {
+           "name":"ROLE_USER"
+      }
+  ],
+  "username": "babu"
+}
